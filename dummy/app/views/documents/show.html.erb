@@ -1,0 +1,13 @@
+<p>
+  <input id="title" type="text" value="<%= @document.collaborative_title %>">
+</p>
+
+<p>
+  <div id="body" style="height: 200px;"><%= @document.collaborative_body %></div>
+</p>
+
+<%= link_to 'Back', documents_path %>
+
+<script>
+var documentId = <%= @document.id %>
+</script>
