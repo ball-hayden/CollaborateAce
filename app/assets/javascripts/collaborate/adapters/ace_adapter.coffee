@@ -33,7 +33,7 @@ window.Collaborate.Adapters.AceAdapter = class AceAdapter
         operation.retain(startIndex).insert(changedText).retain(endRetain)
       when 'remove'
         removedLength = changedText.length
-        operation.retain(startIndex).delete(removedLength).retain(endRetain + removedLength)
+        operation.retain(startIndex).delete(removedLength).retain(documentLength - startIndex)
 
     @collaborativeAttribute.localOperation(operation)
 
